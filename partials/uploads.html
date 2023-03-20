@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- top -->
+        <div class="top">
+
+            <span class="title">File Server</span>
+            <span class="user-profile">
+                <span class="img-container">
+                    <img src="../images/uprofile.jpg" alt="" class="img-userprofile">
+                    <span class="username">Paul</span>
+                </span>
+            </span>
+
+        </div>
+        <!-- end -->
+        <div class="container">
+            <div class="side-bar">
+                <div class="links">
+                    <ul class="list">
+
+                        <li class="list-item">
+                            <span class="icon" id="home"><i class="fas fa-home"></i></span>
+                            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="list-item">
+                            <span class="icon" id="emails"><i class="fas fa-envelope"></i></span>
+                            <a href="./partials/email.html"><i class="fas fa-envelope"></i> Emails</a>
+                            <!-- <span class="a" id="emails" >Emails</span> -->
+                        </li>
+                        <li class="list-item">
+
+                            <span class="icon" id="uploads"><i class="fas fa-upload"></i></span>
+                            <a href="./partials/uploads.html"><i class="fas fa-upload"></i> Uploads</a>
+                        </li>
+                        <li class="list-item">
+                            <span class="icon" id="downloads"><i class="fas fa-download"></i></span>
+                            <a href="./partials/downloads.html"><i class="fas fa-download"></i> Downloads</a>
+                        </li>
+                        <li class="list-item">
+                            <span class="icon" id="users"><i class="fas fa-users"></i></span>
+                            <a href="./partials/users.html"><i class="fas fa-users"></i> Users</a>
+                        </li>
+                        <li class="list-item">
+                            <span class="icon" id="logout"><i class="fas  fa-sign-out-alt"></i></span>
+                            <a href="#"><i class="fas  fa-sign-out-alt"></i> Sign Out</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="dashboard">
+
+                <div class="form-control">
+                    <form action="" method="post" enctype="multipart/form-data">
+
+                        <div class="desc">
+                            <textarea name="desc" id="desc" cols="" rows="">
+
+                            </textarea>
+                        </div>
+                        <div class="file">
+                            <input type="file" id="file"  name="file">
+                        </div>
+                        <div class="submit">
+                            <button type="submit" id="submit_btn"><i class="fa fa-save"></i> Save </button>
+                        </div>
+                       
+
+                    </form>
+                </div>
+            
+                <div class="recents-uploads">
+                   
+                              
+                    <div class="table">
+                        <table>
+
+                            <p class="head">Recents Upload</p>  
+                            
+                            <hr class="hr">
+                            <br>
+
+                            <input type="text" id="searhcInput" onkeyup="searchWord()" placeholder="Search for names.." title="Type in a name">
+
+                            <table id="recents">
+                                <tr class="header">
+                                    <th style="width:10px;">id</th>
+                                    <th>Desc</th>
+                                    <th>Type</th>
+                                    <th>Action</th>
+
+                                </tr>
+                                <tr>
+                                    <td class="id">1</td>
+                                    <td>DESCRIPTION</td>
+                                    <td>TYPE</td>
+                                    <td class="action">
+                                        <!-- preview -->
+                                       <a href="./previews/preview.html">
+                                    
+                                    <span class="icon-eye" id="preview">
+                                        <i class="fas fa-eye"></i></span>
+                                       </a> 
+                                        <!-- edit -->
+                                    <a href="/delete/{id}"> 
+                                        <span class="icon-trash" id="delete_upload">
+                                            <i class="fas fa-trash">
+                                        </i></span>
+                                       </a>
+                                      <a href="./edits/edit.html"> 
+                                       <span class="icon-edit" id="edit">
+                                        <i class="fas fa-edit"></i></span>
+                                    </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="id">1</td>
+                                    <td>DESCRIPTION</td>
+                                    <td>TYPE</td>
+                                    <td class="action">
+                                        <!-- preview -->
+                                       <a href="./previews/preview.html">
+                                    
+                                    <span class="icon-eye" id="preview">
+                                        <i class="fas fa-eye"></i></span>
+                                       </a> 
+                                        <!-- edit -->
+                                    <a href="/delete/{id}"> 
+                                        <span class="icon-trash" id="delete_upload">
+                                            <i class="fas fa-trash">
+                                        </i></span>
+                                       </a>
+                                      <a href="./edits/edit.html"> 
+                                       <span class="icon-edit" id="edit">
+                                        <i class="fas fa-edit"></i></span>
+                                    </a>
+                                    </td>
+                                </tr><tr>
+                                    <td class="id">1</td>
+                                    <td>DESCRIPTION</td>
+                                    <td>TYPE</td>
+                                    <td class="action">
+                                        <!-- preview -->
+                                       <a href="./previews/preview.html">
+                                    
+                                    <span class="icon-eye" id="preview">
+                                        <i class="fas fa-eye"></i></span>
+                                       </a> 
+                                        <!-- edit -->
+                                    <a href="/delete/{id}"> 
+                                        <span class="icon-trash" id="delete_upload">
+                                            <i class="fas fa-trash">
+                                        </i></span>
+                                       </a>
+                                      <a href="./edits/edit.html"> 
+                                       <span class="icon-edit" id="edit">
+                                        <i class="fas fa-edit"></i></span>
+                                    </a>
+                                    </td>
+                                </tr>
+ 
+
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../script/routes.js"></script>
+<script src="../script/filter.js"></script>
+
+</html>
